@@ -56,7 +56,7 @@ def hangmangame():
     check = input("Do you want to Play Again Y/N : ")
     if check.lower() == 'y' or check.lower() == 'yes':
         hangmangame()
-    print(f"Thanks For Playing {name} :)")
+    print(f"Thanks For Playing {name.capitalize()} :)")
 
 
 hangmangame()
