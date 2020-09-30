@@ -2,7 +2,7 @@
 Created hangman game using python
 Have some fun by playing this game......
 Simple U can play this game in your own machine
-
+Before getting started open your terminal or cmd and type "pip install requests" (mandatory to import this module otherwise it will throw an error)
 ***IF U HAVE ANY IDE'S LIKE VISUAL STUDIO OR PYCHARM ETC.. THEN DONT FOLLOW THESE STEPS AND U CAN EASILY RUN THIS CODE WITH ONE CLICK IN IDE'S****
 
 step1:--> You need to install python(any version > 3.0) on your machine and you can find download link below
