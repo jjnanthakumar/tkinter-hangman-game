@@ -18,7 +18,9 @@ def randomword(name, serviceurl='https://api.datamuse.com/words?'):
         raise ValueError("Datamuse Server Problem! Hang on For a minute :)")
     return random.choice([ele['word'] for ele in data if len(ele['word']) > 5])
 
+
 def hangmangame():
+    guessed = ""
     name = input("Enter Your Name: ")
     print(f"Hello {name.capitalize()}, Welcome to Hangman Game!!")
     print(
@@ -31,9 +33,11 @@ def hangmangame():
     while (turns < 10):
         # if turns == 0:
         #     print(' '.join(hashed))
+
         find = input("Guess a Character: ")
         if len(find) != 1 or not find.isalpha():
             raise ValueError("Value must be single character!!")
+        guessed += find
         if find not in hidden_word:
             turns += 1
         for i, j in enumerate(hidden_word):
@@ -41,6 +45,7 @@ def hangmangame():
                 hashed[i] = j
         print(' '.join(hashed))
         print(f"Remaining Turns : {10 - turns}")
+        print(f"Already Guessed : {guessed}")
 
         if '_' not in hashed:
             print(f"Congragulations {name}! You won")
